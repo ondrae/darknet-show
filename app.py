@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect
+from flask import Flask, request, redirect, render_template
 import twilio.twiml
 import datetime, os, requests, json
 
@@ -14,11 +14,7 @@ def index():
     r = r.json()
     for message in r['messages']:
         messages.append(message['body'])
-    html = "<ul>"
-    for message in messages:
-        html += "<li>"+message+"<li>"
-    html += "</ul>"
-    return html
+    return render_template("index.html", messages=messages)
 
 @app.route("/incoming", methods=['GET', 'POST'])
 def incoming():

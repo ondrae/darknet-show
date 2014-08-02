@@ -1,0 +1,21 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="//cloud.webtype.com/css/944a7551-9b08-4f0a-8767-e0f83db4a16b.css" />
+    <link rel="stylesheet" href="http://style.codeforamerica.org/style/css/main.css">
+    <link rel="stylesheet" href="http://style.codeforamerica.org/style/css/layout.css" media="all and (min-width: 40em)">
+</head>
+<body style="background-color:#FFFFFF;">
+    <ul class="layout-semibreve" style="text-align:center;">
+        {% for message in messages %}
+            <li style="background-image: none;"><h1>{{ message }}</h1></li>
+        {% endfor %}
+    </ul>
+</body>
+<script>
+    setInterval(
+      function() {
+        location.reload();
+      },
+      30000);
+</script>
+</html>
