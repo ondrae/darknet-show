@@ -22,7 +22,7 @@ def incoming():
     """Respond to incoming calls with a simple text message."""
 
     resp = twilio.twiml.Response()
-    resp.message("Isn't that cute.")
+    resp.message("You can trust me.")
     return str(resp)
 
 @app.route("/message", methods=["GET", "POST"])
