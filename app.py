@@ -39,7 +39,7 @@ def message():
             	msg_dict['Body'] = request.form['message']
             	twilio_endpoint = "https://api.twilio.com/2010-04-01/Accounts/%s/SMS/Messages.json" % (os.environ.get('TWILIO_ACCOUNT_SID'))
             	r = requests.post("%s" %(twilio_endpoint), data = msg_dict, auth=(os.environ.get('TWILIO_ACCOUNT_SID'), os.environ.get('TWILIO_AUTH_TOKEN')))
-                return "Message blasted."
+        return "Messages blasted."
 
     return render_template("message.html")
 
